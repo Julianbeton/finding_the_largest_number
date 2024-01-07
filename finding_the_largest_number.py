@@ -17,7 +17,9 @@ def finding_the_largest_number():
 #find the largest number among the 3 numbers
     if first_number >= second_number and first_number >= third_number:
         largest_number = first_number
-        print("The Largest Number is the First Number:", largest_number)
+        first_number_is_the_largest = f"The Largest number is the First Number:{first_number}. The First Number:{first_number} is Greater Than {second_number} and {third_number}"
+        print(first_number_is_the_largest)
+        
     elif second_number >= first_number and second_number >= third_number:
         largest_number = second_number
         print("The Largest Number is Second Number:", largest_number)
