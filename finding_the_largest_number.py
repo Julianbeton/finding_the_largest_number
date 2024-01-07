@@ -17,12 +17,13 @@ def finding_the_largest_number():
 #find the largest number among the 3 numbers
     if first_number >= second_number and first_number >= third_number:
         largest_number = first_number
+        print("The Largest Number is the First Number:", largest_number)
     elif second_number >= first_number and second_number >= third_number:
         largest_number = second_number
+        print("The Largest Number is Second Number:", largest_number)
     else: 
         largest_number = third_number
+        print("The Largest Number is the Third Number:", largest_number)
 
-#Display the largest number
-    print("The Largest Number is:", largest_number)
 
 finding_the_largest_number()
