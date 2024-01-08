@@ -13,10 +13,13 @@ def finding_the_largest_number():
 
 #ask user to input number 1
     first_number = float(first_number_entry.get())
+
 #ask user to input number 2
     second_number = float(second_number_entry.get())
+
 #ask user to input number 3
     third_number = float(third_number_entry.get())
+
 
     first_number_difference_to_second_number = first_number - second_number
     first_number_difference_to_third_number = first_number - third_number
@@ -26,6 +29,7 @@ def finding_the_largest_number():
 
     third_number_difference_to_first_number = third_number - first_number
     third_number_difference_to_second_number = third_number - second_number
+    
 
 #find the largest number among the 3 numbers
     if first_number >= second_number and first_number >= third_number:
