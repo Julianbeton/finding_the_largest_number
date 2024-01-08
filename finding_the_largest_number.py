@@ -9,11 +9,11 @@ from tkinter import messagebox
 #function
 def finding_the_largest_number():
 #ask user to input number 1
-    first_number = float(input("Input the first number: "))
+    first_number = float(first_number_entry.get())
 #ask user to input number 2
-    second_number = float(input("Input the second number: "))
+    second_number = float(second_number_entry.get())
 #ask user to input number 3
-    third_number = float(input("Input the third number: "))
+    third_number = float(third_number_entry.get())
 #find the largest number among the 3 numbers
     if first_number >= second_number and first_number >= third_number:
         largest_number = first_number
@@ -31,10 +31,25 @@ def finding_the_largest_number():
         print(third_number_is_the_largest)
 
 window = tk.Tk()
-window.title("Largest Number Finder🔍🕵🔎")
-window.configure(bg="#98F5FF")
+window.title("Largest Number Finder Program🔍🕵🔎")
+window.configure(bg="#000000")
 window.geometry("500x500")
 
-finding_the_largest_number()
+label = tk.Label(window, text = "Largest Number Finder🔍🕵🔎", font=("Times", "36","bold italic"), bg="#FF6347", fg="#76EE00").grid(row=0, column=0, sticky=tk.W)
+
+tk.Label(window, text = "Enter First Number:", font=("Helvetica", "20", "bold italic"), bg="#FF6347", fg="#800000").grid(row=1, column=0, sticky=tk.W)
+first_number_entry = tk.Entry(window, width=10, font=("Times", "20", "bold italic"),bg="#800000",fg="#76EE00")
+first_number_entry.grid(row = 1, column = 0, pady = 5)
+
+tk.Label(window, text = "Enter Second Number:", font=("Helvetica", "20", "bold italic"), bg="#FF6347", fg="#800000").grid(row=2, column=0, sticky=tk.W)
+second_number_entry = tk.Entry(window, width=10, font=("Times", "20", "bold italic"),bg="#800000",fg="#76EE00")
+second_number_entry.grid(row = 2, column = 0, pady = 5) 
+
+tk.Label(window, text = "Enter Third Number:", font=("Helvetica", "20", "bold italic"), bg="#FF6347", fg="#800000").grid(row=3, column=0, sticky=tk.W)
+third_number_entry = tk.Entry(window, width=10, font=("Times", "20", "bold italic"),bg="#800000",fg="#76EE00")
+third_number_entry.grid(row = 3, column = 0, pady = 5)
+
+finding_the_largest_number_button = tk.Button(window, text="Find the Largest Number", command=finding_the_largest_number, width=8, height=1, font=("Times", "18","bold italic"), bg="#76EE00", fg="#800000", padx=15, pady=5)
+finding_the_largest_number_button.grid(row=4, column=0, columnspan=2, pady=5)
 
 window.mainloop()
