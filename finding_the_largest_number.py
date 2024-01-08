@@ -2,7 +2,7 @@
 #Ask user to input 3 numbers. Find and print the biggest number using only if-else statement.
 
 #pseudocode
-#import tkinter
+#import customtkinter
 import tkinter as tk
 from tkinter import messagebox
 
@@ -30,5 +30,11 @@ def finding_the_largest_number():
         third_number_is_the_largest = f"The Largest Number is the Third Number:{largest_number}. The Third Number:{third_number} is Greater Than {first_number} and {second_number}"
         print(third_number_is_the_largest)
 
+window = tk.Tk()
+window.title("Largest Number Finder🔍🕵🔎")
+window.configure(bg="#98F5FF")
+window.geometry("500x500")
 
 finding_the_largest_number()
+
+window.mainloop()
