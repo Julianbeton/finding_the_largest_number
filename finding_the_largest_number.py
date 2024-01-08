@@ -19,17 +19,23 @@ def finding_the_largest_number():
 #find the largest number among the 3 numbers
     if first_number >= second_number and first_number >= third_number:
         largest_number = first_number
-        result = f"The Largest Number is the First Number: {largest_number}. \n The First Number: {first_number} is Greater Than {second_number} and {third_number}."
+        result = f"The Largest Number is the First Number: {largest_number}.\n Solution: {first_number} is Greater Than {second_number} and {third_number}."
         
     elif second_number >= first_number and second_number >= third_number:
         largest_number = second_number
-        result = f"The Largest Number is the Second Number: {largest_number}. \n The Second Number: {second_number} is Greater Than {first_number} and {third_number}."
+        result = f"The Largest Number is the Second Number: {largest_number}.\n Solution: {second_number} is Greater Than {first_number} and {third_number}."
 
     else: 
         largest_number = third_number
-        result = f"The Largest Number is the Third Number: {largest_number}. \n The Third Number: {third_number} is Greater Than {first_number} and {second_number}."
+        result = f"The Largest Number is the Third Number: {largest_number}.\n Solution: {third_number} is Greater Than {first_number} and {second_number}."
     
-    messagebox.showinfo("The Largest Number", result)
+    output_window = tk.Toplevel()
+    output_window.title("Result")
+    output_window.geometry("700x80")
+    output_window.configure(bg="#000000")
+
+    result_label = tk.Label(output_window, text=result, fg="#00FFFF", bg="#000000", font=("System", "20", "italic"))
+    result_label.pack()
 
 
 window = tk.Tk()
